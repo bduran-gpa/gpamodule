@@ -32,4 +32,11 @@ public abstract class AbstractScriptModule implements MathBlackBox {
     
     protected abstract String helloWorldImpl(String name);
 
+    @Override
+    public long getMemUsage() {
+        return getMemUsageImpl();
+    }
+
+    protected abstract long getMemUsageImpl();
+
 }

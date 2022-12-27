@@ -7,4 +7,6 @@ public interface MathBlackBox {
 
 	public String helloWrold(String name);
 
+    public long getMemUsage();
+
 }

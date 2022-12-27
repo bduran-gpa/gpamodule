@@ -22,9 +22,13 @@ public class GatewayScriptModule extends AbstractScriptModule {
 
 	@Override
 	protected String helloWorldImpl(String name) {
-		// TODO Auto-generated method stub
-        long sm = context.getPerformanceMonitor().getCurrentMemoryUsage();
-		return String.valueOf(sm);
+		return "Hello " + name;
 	}
+
+    @Override
+    protected long getMemUsageImpl() {
+        long sm = context.getPerformanceMonitor().getCurrentMemoryUsage();
+        return sm;
+    }
 
 }

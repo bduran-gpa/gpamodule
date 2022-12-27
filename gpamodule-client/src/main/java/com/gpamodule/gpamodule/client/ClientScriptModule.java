@@ -27,5 +27,10 @@ public class ClientScriptModule extends AbstractScriptModule {
 		return rpc.helloWrold(name);
 	}
 
+    @Override
+    protected long getMemUsageImpl() {
+        return rpc.getMemUsage();
+    }
+
 
 }
